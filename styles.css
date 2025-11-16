@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 在下面的部分大部分都是对文字和图案进行大小和颜色的定义,方法都一样,就不一一备注 */
+/* 根据选择的图片的颜色,我选了以下的颜色作为网站的主题颜色来互相适应 */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2B3A55; /* 主文字色 */
+  background-color: #ffffff;
+  overflow-x: hidden; /* 滚动条，hidden是把它隐藏起来 */
+}
+
+/* 头部导航 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 5%;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logo .dot {
+  color: #2B3A55; 
+  font-size: 24px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #2B3A55;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #555;
+}
+
+.hire-btn {
+  background-color: #1a2536;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hire-btn:hover {
+  background-color: #2B3A55;
+}
+
+/* 主内容区 */
+.hero {
+  position: relative;
+  padding: 50px 5%;
+  min-height: calc(100vh - 120px);
+}
+
+/* 装饰圆形 */
+.decor-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: bisque; /* 与专辑背景颜色相呼应 */
+  z-index: 1;
+}
+
+.top-circle {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 40%;
+  background: linear-gradient(135deg, #37977730, #b3fffe50);
+}
+
+.bottom-circle {
+  width: 400px;
+  height: 400px;
+  bottom: -100px;
+  left: -100px;
+  background-color: #37977720;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+  z-index: 5;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 文字内容 */
+.hero-content {
+  flex: 1;
+}
+
+.subtitle {
+  color: #2B3A55; /* 副标题绿色 */
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.title .highlight {
+  color: #555; /* 名字高亮绿色 */
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+/* 按钮样式 */
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 30px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primary-btn {
+  background-color: #2B3A55;
+  color: white;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #1a2536;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #2B3A55;
+  border: 2px solid #2B3A55;
+}
+
+.secondary-btn:hover {
+  background-color: #2B3A55;
+  color: white;
+}
+
+/* 右侧图片 */
+/* 这里我想了很久,如果不加这一步部分的话图片会就一直在左边,然后全部的文字就一连串过去,这里需要对文字和图片进行调整以方便文字换行 */
+.hero-image {
+  flex: 1;
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+/* 图片的大小 */
+.image-bg {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(135deg,#2B3A55,#37977730);
+  transform: translate(10%, -45%) rotate(10deg);
+  border-radius: 20px;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+/* 底部社交图标 */
+.footer {
+  position: relative;
+  z-index: 5;
+  padding: 20px 5%;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-icon {
+  color: #2B3A55;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #379777;
+}
+
+/* 响应式调整 */
+/* 这一段是借鉴了网课的思路,还没有很清楚是如何运行 */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

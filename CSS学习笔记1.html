@@ -1,0 +1,56 @@
+
+<!-- css相当于装修，在html构建好骨架的基础上完善与修饰。
+ 与markdown类似，css也是一种语法，但它有更复杂的结构，更像是一种语言类型
+ -->
+
+
+<!-- 基本语法：
+  选择器{
+    属性1：属性值1；
+    属性2：属性值2；
+  }
+-->
+
+<!-- 关于styel:
+ 1.在css中如果要写其他类型的注释需要在style的框架内完成 
+ 2.style如其本意，就表示着以下的内容将用什么风格，在css里写的格式将会在html里被运用
+
+ -->
+
+
+
+<!-- CSS三种导入方式
+ 1.内联样式:在html内写
+ 2.内部样式表:单独放在css文件里
+ 3.外部样式表:多个网页都可以使用
+ 三种导入方式的优先级：内联样式 > 内部样式表 > 外部样式表
+-->
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS学习笔记1-样式</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <style>
+  /* 这里的注释会生效（CSS注释） */
+</style>
+
+<style>
+  /* 这是一个p标签选择器 */
+  p{
+    color: aliceblue;
+    font-size: 16px;
+  }
+</style>
+
+</head>
+<body>
+    <p>这是一个运用了css样式的文本</p>
+    <h1 style="color: aliceblue;">这是一个一级标题,使用内联样式和</h1>
+    <h2>这是一个二级标题，应用内部样式</h2>
+    <h3>这是一个三级标题，应用外部样式</h3>
+ 
+</body>
+</html>
